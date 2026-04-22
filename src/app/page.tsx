@@ -2,21 +2,10 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
-  const [isNavScrolled, setIsNavScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [animatedElements, setAnimatedElements] = useState<Set<string>>(new Set());
-
-  // Navbar scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsNavScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -52,12 +41,12 @@ export default function Home() {
     {
       title: 'Hospitality',
       description: 'Hotels and venues with unforgettable ambiance',
-      image: 'https://images.unsplash.com/photo-1631049307038-da31d880588b?w=500&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1590490360182-c33d955e4c47?w=500&h=400&fit=crop',
     },
     {
       title: 'Turnkey',
       description: 'Complete project management from concept to completion',
-      image: 'https://images.unsplash.com/photo-1589930695075-e5bddf79282f?w=500&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&h=400&fit=crop',
     },
   ];
 
@@ -75,7 +64,7 @@ export default function Home() {
     {
       title: 'The Velvet Lounge',
       category: 'Hospitality',
-      image: 'https://images.unsplash.com/photo-1631049307038-da31d880588b?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1590490360182-c33d955e4c47?w=600&h=400&fit=crop',
     },
   ];
 
@@ -94,69 +83,6 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-x-hidden bg-stone-950">
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isNavScrolled
-          ? 'bg-stone-950/95 backdrop-blur shadow-lg'
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-serif font-bold gold-accent cursor-pointer">
-            STUDIO NAME
-          </h1>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8">
-            <Link href="/" className="text-stone-200 hover:gold-accent transition-colors duration-300">
-              Home
-            </Link>
-            <Link href="/about" className="text-stone-200 hover:gold-accent transition-colors duration-300">
-              About
-            </Link>
-            <Link href="/services" className="text-stone-200 hover:gold-accent transition-colors duration-300">
-              Services
-            </Link>
-            <Link href="/portfolio" className="text-stone-200 hover:gold-accent transition-colors duration-300">
-              Portfolio
-            </Link>
-            <Link href="/contact" className="text-stone-200 hover:gold-accent transition-colors duration-300">
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-stone-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-stone-900/95 backdrop-blur border-t border-stone-800">
-            <div className="flex flex-col gap-4 px-6 py-4">
-              <Link href="/" className="text-stone-200 hover:gold-accent transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-stone-200 hover:gold-accent transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="text-stone-200 hover:gold-accent transition-colors">
-                Services
-              </Link>
-              <Link href="/portfolio" className="text-stone-200 hover:gold-accent transition-colors">
-                Portfolio
-              </Link>
-              <Link href="/contact" className="text-stone-200 hover:gold-accent transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
-
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-center justify-center pt-20">
         <img
@@ -339,48 +265,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-stone-900 border-t border-stone-800 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <h3 className="text-2xl font-serif font-bold gold-accent mb-4">STUDIO NAME</h3>
-              <p className="text-stone-400 text-sm leading-relaxed">
-                Award-winning interior design studio creating luxury spaces.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-stone-100 font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-stone-400 text-sm">
-                <li><Link href="/" className="hover:gold-accent transition-colors">Home</Link></li>
-                <li><Link href="/about" className="hover:gold-accent transition-colors">About</Link></li>
-                <li><Link href="/services" className="hover:gold-accent transition-colors">Services</Link></li>
-                <li><Link href="/portfolio" className="hover:gold-accent transition-colors">Portfolio</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-stone-100 font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-stone-400 text-sm">
-                <li>hello@studioname.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>New York, NY</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-stone-100 font-semibold mb-4">Follow Us</h4>
-              <ul className="space-y-2 text-stone-400 text-sm">
-                <li><a href="#" className="hover:gold-accent transition-colors">Pinterest</a></li>
-                <li><a href="#" className="hover:gold-accent transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:gold-accent transition-colors">YouTube</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-stone-800 pt-8 text-center">
-            <p className="text-stone-400 text-sm">&copy; 2024 Studio Name. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
