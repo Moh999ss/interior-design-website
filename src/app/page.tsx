@@ -41,7 +41,7 @@ export default function Home() {
     {
       title: 'Hospitality',
       description: 'Hotels and venues with unforgettable ambiance',
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d955e4c47?w=500&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=500&h=400&fit=crop',
     },
     {
       title: 'Turnkey',
@@ -64,7 +64,7 @@ export default function Home() {
     {
       title: 'The Velvet Lounge',
       category: 'Hospitality',
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d955e4c47?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop',
     },
   ];
 

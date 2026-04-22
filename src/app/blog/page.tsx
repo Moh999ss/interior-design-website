@@ -21,7 +21,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Discover the top design trends that are reshaping luxury interiors this year, from bold color palettes to sustainable materials.',
     category: 'Trends',
     date: 'Jan 15, 2026',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd905b0fdd63?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop',
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Explore how to seamlessly blend contemporary design elements with classic furniture for a timeless aesthetic.',
     category: 'Trends',
     date: 'Mar 18, 2026',
-    image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop',
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Luxury and sustainability go hand in hand. Discover how to create beautiful spaces with minimal environmental impact.',
     category: 'Trends',
     date: 'Apr 2, 2026',
-    image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77d?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="relative h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1400&h=600&fit=crop"
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&h=600&fit=crop"
           alt="Design Journal"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />

@@ -39,21 +39,21 @@ const projects: Project[] = [
     title: "The Velvet Lounge",
     category: "Hospitality",
     location: "Delhi",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d955e4c47",
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
   },
   {
     id: 5,
     title: "Coastal Retreat Spa",
     category: "Hospitality",
     location: "Kerala",
-    image: "https://images.unsplash.com/photo-1584394838336-abadf3d096d5",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136",
   },
   {
     id: 6,
     title: "Modern Minimalist Loft",
     category: "Residential",
     location: "Pune",
-    image: "https://images.unsplash.com/photo-1616394584178-d66cfa6d19cd",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const projects: Project[] = [
     title: "Boutique Hotel Lobby",
     category: "Hospitality",
     location: "Udaipur",
-    image: "https://images.unsplash.com/photo-1566665556112-652d0cef0e84",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6",
   },
 ];
 

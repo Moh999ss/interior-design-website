@@ -40,7 +40,7 @@ export default function ServicesPage() {
       title: "Hospitality Design",
       description:
         "Create unforgettable guest experiences through thoughtful design. Our hospitality projects blend luxury, functionality, and unique storytelling.",
-      image: "https://images.unsplash.com/photo-1590490360182-c33d955e4c47",
+      image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
       features: [
         "Guest Experience Design",
         "Theme Development",
